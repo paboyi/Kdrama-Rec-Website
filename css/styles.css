@@ -374,10 +374,7 @@ section.best-sellers .product-slider .product .product-info .price .discounted-p
    color: red;
 }
 
-section.best-sellers .product-slider .product .product-info .special
-{
-color: red;
-}
+
 section.best-sellers .product-slider .product .product-info button 
 /*notice it's not .button. It's an element not a class*/ 
 {
