@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Kdrama Recs for a freind</title>
+        <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;700&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Rubik+Mono+One&display=swap" rel="stylesheet">
+
+        <link rel="stylesheet" href="css/styles.css">
+    </head>
+
+    <body> <!-- (to comment) -->
+
+        <header>
+            <div class = "container">
+
+                
+            <section class="logo">
+                <a href="index.html">
+                    <img src="images/sign.png" alt="Fan sign">
+                <!-- <strong>Your</strong>
+                <span class = "blue-dot"></span> 
+                <span>Logo</span> -->
+                </a>
+            </section>
+
+            <nav> 
+                <ul>
+                    <!-- <li><a href="about.html">About Us</a></li> linking 2 html files in the same folder -->
+
+                <!--making links to sections in our website. We made an id in the index.html file-->
+                    <li><a href="index.html#best-sellers-section">Movie-Recs.</a></li>
+                    <li><a href="index.html#footer-contact">Contact Me</a></li>
+                    <li class="menu-icon"><img src="images/menu_icon.png" alt="hamburger icon"></li>
+                </ul>
+            </nav>
+            </div>
+
+        </header>
+
+            <!-- Beware that because the header is fixed. 
+                The nextelement after it will be hidden behind it.
+            That is why we should add a ppadding top to the <body>. 
+                So that the enxt element begins below the height of 
+                the header.-->
+
+        <section class = "hero"> 
+           <picture> 
+                <source media="(max-width: 576px)" srcset="images/A4.png> 
+                <source media="(max-width: 960px)" srcset="images/A3.png"> 
+                <source media="(max-width: 1440px)" srcset="images/A2.png"> <!-- if the screen is 1280px it will stop here -->
+                <img src="images/A1a.png" alt="Header_Image"> <!-- alt is description -->
+            </picture> 
+
+
+            <div class="hero-content">
+                <div class="container">
+                  <h1><b>Welcome to the World of K-drama</b>
+                    <p> 
+                        I believe I am by now what you call a CONNOISSEUR of Korean Dramas. <br>
+                        I know what's coming. <br>
+                        I know what is playing. <br>
+                        I know what was there 10 years ago. <br>
+                        And I know what is worth the hype and "mehhh!" <br>
+                        Scroll down to see my current Recommendations. <br>
+                    </p>
+                </h1>
+                
+                <img src="images/Asset 1@3x.png" alt="Roadside kiosk drawing" class="hero-img">
+                <!-- <img src="images/Stamp 3.png" alt="good_stamp" class="hero-img stamp" style=" width: 100px; height: 100px; position: absolute; top: 60px; right: 400px;"> -->
+
+                <!-- <button>See all Watches</button>    -->
+                </div>
+            </div>
+
+        </section>
+                
+        
+        <!-- Using just one h1 in your webpage will help seach engines like google, bing SEO to find out what our website is about.-->
+        
+        <section class="best-sellers" id="best-sellers-section">
+
+        <!--Instead of having a class and an id we can just use an id. 
+        But then we'll have to change our classes in css
+        Maybe next time. Call an id with # -->
+
+            <h2>Recommended Movies for You my Friend</h2>
+            <hr> <!---line break element <hr>-->
+
+            
+            <div class="product-slider">
+
+
+                <div class="container">      
+                        <!--this will be our boxes with product information-->
+                        <!-- Mr. Sunshine-->
+                    <div class="product">   
+                        <div class="product-picture">
+                            <!--  Because I have not found a way to put the videos manually from my own folders
+                                
+                                <video width="auto" height="auto" poster="images/Mr_sunshine_1.png" controls>
+                                <source src="videos/Mr Sunshine-copy.mp4" type="video/mp4"> 
+                             Your browser does not support the video tag.
+                              </video>      -->
+
+                              <img src="images/Mr_sunshine.png" alt="Mr_sunshine kdrama poster">
+
+                        </div>
+
+                        <div class="product-info">
+                            <h3 class = "categories"><b>Mr. Sunshine</b></h3>
+                            <h4 class = "title">Historical Romance</h4>
+                            <h5 class = "price">
+                                Rating = 10/10
+                            </h5>
+                            <a href="https://youtu.be/H1_qWYXgu1U?si=11L3J97pcD3GriZY" target="_blank"><button>Watch on YouTube</button></a>  
+                        </div>
+                    </div>
+
+                    <!-- Goblin: The Great & Lonely god -->
+                    <div class="product">   
+                        <div class="product-picture">
+                            <!-- Because I have not found a way to put the videos manually from my own folders
+                                
+                                <video width="auto" height="auto" poster="images/Guardian_-_The_Lonely_and_Great_god.png" controls>
+                                <source src="videos/The Goblin - DONE-copy.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                              </video>   -->
+
+                              <img src="images/Guardian_The_Lonely_and_Great_god.png" alt="Guardian_-_The_Lonely_and_Great_god kdrama poster">
+
+                        </div>
+
+                        <div class="product-info">
+                            <h3 class = "categories"><b>Goblin: The Great & Lonely god</b></h3>
+                            <h4 class = "title">Fantasy Historical+Contemporary Romance</h4>
+                            <h5 class = "price">
+                                Rating = 10/10
+                            </h5>
+                            <a href="https://youtu.be/GUBMbS-XkxQ?si=t3AxNrrqY0KoHG8E" target="_blank"><button>Watch on YouTube</button></a>  
+                        </div>
+                    </div>
+                </div>
+
+                <div class="container">      
+                    <!--this will be our boxes with product information-->
+
+                    <!-- Hotel Del Luna -->
+                    <div class="product new">   
+                    <div class="product-picture">
+                        <video width="auto" height="auto" poster="images/Hotel_del_luna.png" controls>
+                            <!-- <source src="videos/Mr Sunshine - DONE.mp4" type="video/mp4"> -->
+                            Your browser does not support the video tag.
+                          </video>                        
+                    </div>
+
+                    <div class="product-info">
+                        <h3 class = "categories"><b>Hotel Del Luna</b></h3>
+                        <h4 class = "title">--------------------</h4>
+                        <h5 class = "price">
+                            ----------
+                        </h5>
+                    </div>
+                    </div>
+
+                 <!-- It's Okay to Not be Okay -->
+                     <div class="product new">   
+                    <div class="product-picture">
+                        <video width="auto" height="auto" poster="images/its_okay_to_not_be_okay.png" controls>
+                            <!-- <source src="videos/Mr Sunshine - DONE.mp4" type="video/mp4"> -->
+                            Your browser does not support the video tag.
+                          </video>                        
+                    </div>
+
+                    <div class="product-info">
+                        <h3 class = "categories"><b>It's Okay to Not be Okay</b></h3>
+                        <h4 class = "title">--------------------</h4>
+                        <h5 class = "price">
+                            ----------
+                        </h5>
+                    </div>
+                     </div>
+                </div>
+
+
+                <div class="container">      
+                    <!--this will be our boxes with product information-->
+
+                    <!-- Death's game -->
+                    <div class="product new">   
+                    <div class="product-picture">
+                        <video width="auto" height="auto" poster="images/deaths_game.png" controls>
+                            <!-- <source src="videos/Mr Sunshine - DONE.mp4" type="video/mp4"> -->
+                            Your browser does not support the video tag.
+                          </video>                        
+                    </div>
+
+                    <div class="product-info">
+                        <h3 class = "categories"><b>Death's game</b></h3>
+                        <h4 class = "title">--------------------</h4>
+                        <h5 class = "price">
+                            ----------
+                        </h5>
+                    </div>
+                    </div>
+
+                 <!-- Love like the Galaxy -->
+                     <div class="product new">   
+                    <div class="product-picture">
+                        <video width="auto" height="auto" poster="images/love_like_the_galaxy.png" controls>
+                            <!-- <source src="videos/Mr Sunshine - DONE.mp4" type="video/mp4"> -->
+                            Your browser does not support the video tag.
+                          </video>                        
+                    </div>
+
+                    <div class="product-info">
+                        <h3 class = "categories"><b>Love like the Galaxy</b></h3>
+                        <h4 class = "title">--------------------</h4>
+                        <h5 class = "price">
+                            ----------
+                        </h5>
+                    </div>
+                     </div>
+                </div>
+
+
+                <div class="container">      
+                    <!--this will be our boxes with product information-->
+
+                    <!-- Alchemy of Souls -->
+                    <div class="product new">   
+                    <div class="product-picture">
+                        <video width="auto" height="auto" poster="images/alchemy_of_souls.png" controls>
+                            <!-- <source src="videos/Mr Sunshine - DONE.mp4" type="video/mp4"> -->
+                            Your browser does not support the video tag.
+                          </video>                        
+                    </div>
+
+                    <div class="product-info">
+                        <h3 class = "categories"><b>Alchemy of Souls</b></h3>
+                        <h4 class = "title">--------------------</h4>
+                        <h5 class = "price">
+                            ----------
+                        </h5>
+                    </div>
+                    </div>
+
+                 <!-- Vincenzo -->
+                     <div class="product new">   
+                    <div class="product-picture">
+                        <video width="auto" height="auto" poster="images/vincenzo.png" controls>
+                            <!-- <source src="videos/Mr Sunshine - DONE.mp4" type="video/mp4"> -->
+                            Your browser does not support the video tag.
+                          </video>                        
+                    </div>
+
+                    <div class="product-info">
+                        <h3 class = "categories"><b>Vincenzo</b></h3>
+                        <h4 class = "title">--------------------</h4>
+                        <h5 class = "price">
+                            ----------
+                        </h5>
+                    </div>
+                     </div>
+                </div>
+
+                <div class="container">      
+                    <!--this will be our boxes with product information-->
+
+                    <!-- My Dearest -->
+                    <div class="product new">   
+                    <div class="product-picture">
+                        <video width="auto" height="auto" poster="images/My_Dearest.png" controls>
+                            <!-- <source src="videos/Mr Sunshine - DONE.mp4" type="video/mp4"> -->
+                            Your browser does not support the video tag.
+                          </video>                        
+                    </div>
+
+                    <div class="product-info">
+                        <h3 class = "categories"><b>My Dearest</b></h3>
+                        <h4 class = "title">--------------------</h4>
+                        <h5 class = "price">
+                            ----------
+                        </h5>
+                    </div>
+                    </div>
+
+                 <!-- Tale of the Nine-tailed Fox  -->
+                     <div class="product new">   
+                    <div class="product-picture">
+                        <video width="auto" height="auto" poster="images/tale_of_the_nine_tailed.png" controls>
+                            <!-- <source src="videos/Mr Sunshine - DONE.mp4" type="video/mp4"> -->
+                            Your browser does not support the video tag.
+                          </video>                        
+                    </div>
+
+                    <div class="product-info">
+                        <h3 class = "categories"><b>Tale of the Nine-tailed Fox</b></h3>
+                        <h4 class = "title">--------------------</h4>
+                        <h5 class = "price">
+                            ----------
+                        </h5>
+                    </div>
+                     </div>
+                </div>
+
+                <div class="container">      
+                    <!--this will be our boxes with product information-->
+
+                    <!-- King - The Eternal Monarch -->
+                    <div class="product new">   
+                    <div class="product-picture">
+                        <video width="auto" height="auto" poster="images/king_the_eternal_monarch.png" controls>
+                            <!-- <source src="videos/Mr Sunshine - DONE.mp4" type="video/mp4"> -->
+                            Your browser does not support the video tag.
+                          </video>                        
+                    </div>
+
+                    <div class="product-info">
+                        <h3 class = "categories"><b>King - The Eternal Monarch</b></h3>
+                        <h4 class = "title">--------------------</h4>
+                        <h5 class = "price">
+                            ----------
+                        </h5>
+                    </div>
+                    </div>
+
+
+                </div>
+
+            </div>
+            
+            
+
+        </section>
+
+        <footer> 
+            <div class = "bottom-nav" id="footer-contact">
+                <div class="container">
+                    <ul>
+                        <li class = "list-title"><b>CONTACT</b></li>
+                        <li><a href="/">Email</a></li>
+                        <li><a href="/">LinkedIn</a></li>
+                        <li><a href="/">Behance</a></li>
+                        <li><a href="/">Instagram</a></li>
+                    </ul>
+
+<!--Highlight & Ctrl+/ to make comments-->
+
+                    <!-- <ul>
+                        <li class = "list-title">About Us</li>
+                        <li><a href="/">Our Story</a></li>
+                        <li><a href="/">Press</a></li>
+                        <li><a href="/">Blogs</a></li>
+                        <li><a href="/">Awards</a></li>
+                        <li><a href="/">Stores</a></li>
+                    </ul>
+
+
+                    <ul>
+                        <li class = "list-title">Social Media</li>
+                        <li><a href="/">Facebook</a></li>
+                        <li><a href="/">Linkedin</a></li>
+                        <li><a href="/">Instagram</a></li>
+                        <li><a href="/">Twitter</a></li>
+                        <li><a href="/">Youtube</a></li>
+                    </ul>
+
+
+                    <ul>
+                        <li class = "list-title">Customer services</li>
+                        <li><a href="/">Live Chat</a></li>
+                        <li><a href="/">Contact Us</a></li>
+                        <li><a href="/">Terms & Conditions</a></li>
+                        <li><a href="/">Delivery & Returns</a></li>
+                        <li><a href="/">Finance</a></li>
+                    </ul> -->
+                </div>
+            
+            
+            </div>
+
+            <div class="copyright-text">
+                2020 &copy; All Rights Reserved <br> &psi; 
+                <!--searchhtml entities to learn about symbols like copyright ©, >, < etc -->
+                <!--chech what the "  &heartsuit;  " does ;) -->
+            </div>
+        </footer>
+
+    </body>
+
+</html>
