@@ -159,7 +159,6 @@ section.hero img
 
 .hero-content h1 b {
     font-family: 'Rubik Mono One';
-    min-width: 495px;
     max-width: 495px; /*max width so it works well across various device sizes*/
     color: rgb(0, 0, 0);
     font-size: 50px;
