@@ -97,7 +97,7 @@ header nav ul li a {
     text-decoration: none;
 }
 
-header nav ul li a:hover /* hiver is a Sudo class. learn about SUDO classes*/
+header nav ul li a:hover /* hover is a Sudo class. learn about SUDO classes*/
 {
 color: rgb(149, 255, 84);
 cursor: pointer;
@@ -129,18 +129,18 @@ header .logo .blue-dot
 
 
 
-section.hero{
+section.header-background-image{
     position: relative;
 
 }
 
-section.hero img 
+section.header-background-image img 
 {
     width: 100%;
     height: auto;
 }
 
-.hero-content {
+.header-note {
     position: absolute;
     top: 0;
     left: 0;
@@ -149,7 +149,7 @@ section.hero img
     z-index: 0;
 }
 
-.hero-content .container
+.header-note .container
 {
     display: flex;
     flex-direction: row;
@@ -157,7 +157,9 @@ section.hero img
     height: 100%;
 }
 
-.hero-content h1 b {
+
+
+.header-note h1 b {
     font-family: 'Rubik Mono One';
     max-width: 495px; /*max width so it works well across various device sizes*/
     color: rgb(0, 0, 0);
@@ -170,13 +172,13 @@ section.hero img
 
 }
 
-.hero-content img 
+.header-note img 
 {
     max-width: 495px; 
     max-height: 419px; 
 }
 
-.hero-content p{
+.header-note p{
     max-width: 518px;
     color: rgb(0, 0, 0);
     font-weight: 300;   /*since the font is already Heebo by default. We linked it.*/
@@ -187,7 +189,7 @@ section.hero img
     margin-top: 0px;
 }
 
-.hero-content button{
+.header-note button{
     height: 50px;
     width: 220px;
     max-width: 100%;
@@ -203,7 +205,7 @@ section.hero img
     text-transform: uppercase;
 }
 
-.hero-content button:hover
+.header-note button:hover
 {
     background-color: white;    
     color: blue;
@@ -244,7 +246,7 @@ section.best-sellers hr{ /*line break*/
 
 
 
-section.best-sellers .product-slider {
+section.best-sellers .movie-collection {
     margin-top: 50px;
 }
 
@@ -254,13 +256,13 @@ section.best-sellers .container{
     padding: 0 8px; 
 }
 
-section.best-sellers .product-slider .product
+section.best-sellers .movie-collection .one-movie-box
 {
     border-radius: 8px;
-    border: 1px solid #DDD; 
+    border: 1px solid #21f2e17c; 
     width: 75%;
     text-align: center;
-    margin: 10px 8px; /*0px top & bottom, 8px right & left*/
+    margin: 20px 20px; /*0px top & bottom, 8px right & left*/
     padding: 40px;
     position: relative;
     display: flex;  /*we want to align the buttons on the same line. Before this they were up & down*/
@@ -269,7 +271,7 @@ section.best-sellers .product-slider .product
     cursor: pointer;
 }
 
-section.best-sellers .product-slider .product img 
+section.best-sellers .movie-collection .one-movie-box img 
 /*HERE!! I spent hours trying to debug this, img not .img (see the difference*/
 {
     /*This is going to respect the width of the product element*/
@@ -278,7 +280,7 @@ section.best-sellers .product-slider .product img
     padding-top: 20px;
 }
 
-section.best-sellers .product-slider .product video 
+section.best-sellers .movie-collection .one-movie-box video 
 /*HERE!! I spent hours trying to debug this, img not .img (see the difference*/
 {
     /*This is going to respect the width of the product element*/
@@ -291,42 +293,42 @@ section.best-sellers .product-slider .product video
 /*To create the red buttons*/
 /*we will use CSS PSEUDO ELEMENTS*/
 /*This will create something that behaves like an element in html. only we won't have to write it everytime.*/
-/*We will put it inside the .products elements so we don't have to type it into every new product we make in the html code*/
+/*We will put it inside the .one-movie-boxs elements so we don't have to type it into every new product we make in the html code*/
 /* before is a SUDO element. The ::before pseudo-element can be used to insert some content before the content of an element. */
 
-section.best-sellers .product-slider .product.new::before 
+section.best-sellers .movie-collection .one-movie-box.new::before 
 /*If you are want to know more about Pseudo elements search online */
-/* .product.new - means sections that have class PRODUCT & class NEW as their parent classes i.e. <div class="product new"> */
-/* .product .new - means sections that are a child class new of a parent class product. */ 
+/* .one-movie-box.new - means sections that have class PRODUCT & class NEW as their parent classes i.e. <div class="product new"> */
+/* .one-movie-box .new - means sections that are a child class new of a parent class product. */ 
 {
-    content: "Coming Soon";
+    content: "COMING SOON";
     background-color: rgb(0, 255, 208);
     position: absolute;
     top: 12px; /*space from top of element*/
-    right: 12px;
+    right: 40px;
     color: rgb(1, 50, 49);
-    font-size: 14px;
+    font-size: 20px;
     font-weight: 700;
     letter-spacing: 0.35px;
     line-height: 21px;
     text-align: center;
 
     /*think of the padding shortcut as the hand of a clock "top , right, bottom, left " */
-    padding: 4px 15px;
+    padding: 10px 15px;
     border-radius: 10px;
 }
 
 
-section.best-sellers .product-slider .product .product-info 
+section.best-sellers .movie-collection .one-movie-box .movie-info 
 {
     margin-top: 50px;
 }
 
-section.best-sellers .product-slider .product .product-info .categories
+section.best-sellers .movie-collection .one-movie-box .movie-info .movie-name
 {
     color: rgb(0, 162, 141);
     font-weight: normal;
-    font-size: 25px;
+    font-size: 27px;
     text-transform: uppercase;
     letter-spacing: 0.35px;
     line-height: 30px;
@@ -334,9 +336,9 @@ section.best-sellers .product-slider .product .product-info .categories
     margin-top: 0;
 }
 
-section.best-sellers .product-slider .product .product-info .title
+section.best-sellers .movie-collection .one-movie-box .movie-info .tags
 {
-    font-size: 15px;
+    font-size: 20px;
     font-style: italic;
     letter-spacing: 0.5px;
     line-height: 20px;
@@ -346,36 +348,32 @@ section.best-sellers .product-slider .product .product-info .title
 
 }
 
-section.best-sellers .product-slider .product .product-info .price
+section.best-sellers .movie-collection .one-movie-box .movie-info .rating
 {
-    font-weight: bold;
-    color: rgb(1, 226, 170);
-    font-size: 15px;
+    font-weight: 600; 
+    color: rgb(235, 0, 114);
+    font-size: 20px;
     letter-spacing: 0.7px;
-    line-height: 20px;
-    margin-bottom: 16px;
-    margin-top: 0;
-
-}
-
-section.best-sellers .product-slider .product .product-info .price .original-price
-{
-    color: #9b9b9b;
-    font-weight: normal;
-    font-size: 14px;
-    letter-spacing: 0.4px;
     line-height: 30px;
-    text-decoration: line-through;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
 
 }
 
-section.best-sellers .product-slider .product .product-info .price .discounted-price
+section.best-sellers .movie-collection .one-movie-box .movie-info .two-or-more-buttons 
 {
-   color: red;
+display: flex;
+justify-content: center;
 }
 
+section.best-sellers .movie-collection .one-movie-box .movie-info .two-or-more-buttons .one-button
+{
+padding: 0px 25px;
+}
 
-section.best-sellers .product-slider .product .product-info button 
+section.best-sellers .movie-collection .one-movie-box .movie-info button 
 /*notice it's not .button. It's an element not a class*/ 
 {
     height: 50px;
@@ -391,8 +389,8 @@ section.best-sellers .product-slider .product .product-info button
     cursor: pointer;
 }
 
-section.best-sellers .product-slider .product:hover .product-info button
-/*We put the hover class on the .product and write till button because we wnat the hover state
+section.best-sellers .movie-collection .one-movie-box .movie-info button:hover
+/*We put the hover class on the .one-movie-box and write till button because we wnat the hover state
 to come on whenever we touch anywhere on the product. But the physical look we to chnage is the button */
 {
     background-color: rgb(255, 0, 30);
@@ -494,7 +492,8 @@ Section.newsletter form button:hover
 
 footer .bottom-nav
 {
-padding: 60px 0;
+margin-top: 100px;
+padding: 25px 0;
 background-color: #0cffca;
 }
 
@@ -512,16 +511,23 @@ footer .bottom-nav .container
     justify-content: center;
 }
 
+footer .bottom-nav .container .list-title {
+    padding-bottom: 30px;
+    font-size: 25px;
+    color: #015f4b;
+}
+
+
 footer .bottom-nav ul li a
 {
-    font-size: 16px;
+    font-size: 20px;
     font-weight: normal;
     letter-spacing: 0.4px;
     line-height: 22px;
     margin-top: 0;
     margin-bottom: 10px;
     display: block; /*to make the margins apply. a elements are inline elements*/
-    color: #000000;
+    color: black;
     text-decoration: none; /*removes the underline*/
 
 }
@@ -532,28 +538,21 @@ color: rgb(221, 0, 255);
 /*links <a> element have a default pointer*/
 }
 
-footer .bottom-nav ul li.list-title
-{
-    font-size: 20px;
-    font-weight: 700;
-    letter-spacing: 0.5px;
-    line-height: 26px;
-    margin-top: 0;
-    margin-bottom: 20px;
-    color: rgb(0, 0, 0);
-}
 
 footer .copyright-text
 {
     color: #015f4b;
-    font-weight: bold;
     background-color: #08e5b5;
-    height: 60px;
+    height: 100px;
+    
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
-    font-size: 16px;
+
+    font-size: 25px;    
+    font-weight: bold;
+
     letter-spacing: 0.4px;
     line-height: 22px;
 }
@@ -649,7 +648,7 @@ Safe bet? Just use the same heading for any part you want to make responsive. */
         height: 70px;
     }
 
-    .hero-content h1 
+    .header-note h1 
     {
         font-size: 44px;
         letter-spacing: 1.1;
@@ -657,7 +656,7 @@ Safe bet? Just use the same heading for any part you want to make responsive. */
         margin-bottom: 12px;
     }
 
-    .hero-content p 
+    .header-note p 
     {
         font-size: 18px;
         letter-spacing: 0.45px;
@@ -665,7 +664,7 @@ Safe bet? Just use the same heading for any part you want to make responsive. */
         margin-bottom: 12px;
     }
 
-    .hero-content button 
+    .header-note button 
     {
         font-size: 14px;
         letter-spacing: 0.35px;
@@ -686,32 +685,32 @@ Safe bet? Just use the same heading for any part you want to make responsive. */
         border-top: 5px solid #f11d9c;
     }
 
-    section.best-sellers .product-slider {
+    section.best-sellers .movie-collection {
         margin-top: 70px;
     }
      
-    section.best-sellers .product-slider .product .product-info .categories {
+    section.best-sellers .movie-collection .one-movie-box .movie-info .movie-name {
         font-size: 12px;
         letter-spacing: 0.3px;
         line-height: 30px;
 
     }
     
-    section.best-sellers .product-slider .product .product-info .title {
+    section.best-sellers .movie-collection .one-movie-box .movie-info .tags {
         font-size: 16px;
         letter-spacing: 0.5px;
         line-height: 26px;
         
     }
     
-    section.best-sellers .product-slider .product .product-info .price {
+    section.best-sellers .movie-collection .one-movie-box .movie-info .rating {
         font-size: 24px;
         font-weight: 700;
         letter-spacing: 0.6px;
         margin-bottom: 12px;
     }
 
-    section.best-sellers .product-slider .product .product-info .price .original-price {
+    section.best-sellers .movie-collection .one-movie-box .movie-info .rating .original-rating {
         font-size: 14px;
         letter-spacing: 0.35px;
         line-height: 30px;
@@ -720,7 +719,7 @@ Safe bet? Just use the same heading for any part you want to make responsive. */
         line-height: 16px;
     }
 
-    section.best-sellers .product-slider .product .product-info button {
+    section.best-sellers .movie-collection .one-movie-box .movie-info button {
         height: 40px;
         width: 180px;
         letter-spacing: 0.35px;
@@ -779,7 +778,7 @@ Safe bet? Just use the same heading for any part you want to make responsive. */
         line-height: 22px;
     }
 
-    footer .bottom-nav ul li.list-title {
+    footer .bottom-nav ul li.list-tags {
         font-size: 16px;
         letter-spacing: 0.5px;
         line-height: 26px;
@@ -798,8 +797,17 @@ Safe bet? Just use the same heading for any part you want to make responsive. */
 /*End for small desktop screens*/
 
 
+
+
+
+
+
+
+
+
+
 /*Start for Tablet screens*/
-@media screen and (max-width: 960px) /*for tablets*/
+@media screen and (max-width: 1300px) /*for tablets*/
 {
     .container 
     {
@@ -819,7 +827,7 @@ Safe bet? Just use the same heading for any part you want to make responsive. */
         font-size: 20px;
     }
 
-    .hero-content h1 
+    .header-note h1 
     {
         font-size: 40px;
         letter-spacing: 1;
@@ -827,20 +835,20 @@ Safe bet? Just use the same heading for any part you want to make responsive. */
         /*anything you don't specify but changed in the screen larger than this will apply here*/
     }
 
-    .hero-content p 
+    .header-note p 
     {
         font-size: 16px;
         letter-spacing: 0.4px;
         line-height: 24px;
     }
 
-    .hero-content img
+    .header-note img
     {
         display: none;
     }
 
 
-    .hero-content button 
+    .header-note button 
     {
         width: 196px;
         font-size: 14px;
@@ -869,7 +877,7 @@ Safe bet? Just use the same heading for any part you want to make responsive. */
         width: 500px;
     }
 
-    section.best-sellers .product-slider {
+    section.best-sellers .movie-collection {
         margin-top: 48px;
     }
 
@@ -879,33 +887,33 @@ Safe bet? Just use the same heading for any part you want to make responsive. */
     justify-content: center;
     }
 
-    section.best-sellers .product-slider .product
+    section.best-sellers .movie-collection .one-movie-box
     {
         min-width: 220px; /*so it never gets smaller than that. Remove it and try scaling*/
         margin: 17px 8px;
     }
 
-    section.best-sellers .product-slider .product .product-info .categories {
-        font-size: 12px;
+    section.best-sellers .movie-collection .one-movie-box .movie-info .movie-name {
+        font-size: 18px;
         letter-spacing: 0.3px;
         line-height: 30px;
         margin-bottom: 5px;
     }
     
-    section.best-sellers .product-slider .product .product-info .title {
+    section.best-sellers .movie-collection .one-movie-box .movie-info .tags {
         font-size: 13px;
         letter-spacing: 0.5px;
         line-height: 18px;
         margin-bottom: 8px;
     }
     
-    section.best-sellers .product-slider .product .product-info .price {
+    section.best-sellers .movie-collection .one-movie-box .movie-info .rating {
         font-size: 16px;
         letter-spacing: 0.4px;
         line-height: 30px;
     }
     
-    section.best-sellers .product-slider .product .product-info .price .original-price {
+    section.best-sellers .movie-collection .one-movie-box .movie-info .rating .original-rating {
         font-size: 9px;
         letter-spacing: 0.23px;
         line-height: 30px;
@@ -913,7 +921,7 @@ Safe bet? Just use the same heading for any part you want to make responsive. */
         line-height: 14px;
     }
     
-    section.best-sellers .product-slider .product .product-info button {
+    section.best-sellers .movie-collection .one-movie-box .movie-info button {
         height: 36px;
         width: 193px;
         font-size: 12px;
@@ -921,7 +929,7 @@ Safe bet? Just use the same heading for any part you want to make responsive. */
         line-height: 18px;
     }
 
-    section.best-sellers .product-slider .product.new::before {
+    section.best-sellers .movie-collection .one-movie-box.new::before {
         font-size: 11px;
         font-weight: 700;
         letter-spacing: 0.27px;
@@ -964,6 +972,18 @@ Safe bet? Just use the same heading for any part you want to make responsive. */
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
 /*Start for small Mobile phone screens*/
 @media screen and (max-width: 576px) /*for phones*/
 {
@@ -985,12 +1005,12 @@ Safe bet? Just use the same heading for any part you want to make responsive. */
 
        /*We'll be changing the position for this. 
      Remember we set it as an absolute position to show in front of the image.*/
-    .hero-content {
+    .header-note {
         position: static;
     }
 
   
-    .hero-content h1 
+    .header-note h1 
     {
         color: black;
         font-size: 32px;
@@ -1001,17 +1021,17 @@ Safe bet? Just use the same heading for any part you want to make responsive. */
         margin-top: 27px;
     }
 
-    .hero-content img
+    .header-note img
     {
         display: none;
     }
 
-    .hero-content p 
+    .header-note p 
     {
         display: none;
     }
 
-    .hero-content button 
+    .header-note button 
     {
         font-size: 14px;
         letter-spacing: 0.35px;
@@ -1025,7 +1045,7 @@ Safe bet? Just use the same heading for any part you want to make responsive. */
     padding-top: 64px;
     }
 
-    section.best-sellers .product-slider .product 
+    section.best-sellers .movie-collection .one-movie-box 
     {
         width: 82%; /*when the screen is LESS than 360px the width will be 82% of the screen*/
         max-width: 360px; /*when the screen is bigger than 360px the width will be 360px*/
@@ -1045,33 +1065,34 @@ Safe bet? Just use the same heading for any part you want to make responsive. */
         width: 100px;
     }
 
-    section.best-sellers .product-slider {
+    section.best-sellers .movie-collection {
         margin-top: 42px;
     }
   
-    section.best-sellers .product-slider .product .product-info .categories {
+    section.best-sellers .movie-collection .one-movie-box .movie-info .movie-name {
         margin-bottom: 7px;
+        font-size: 15px;
     }
     
-    section.best-sellers .product-slider .product .product-info .title {
+    section.best-sellers .movie-collection .one-movie-box .movie-info .tags {
         font-size: 14px;
         letter-spacing: 0.54px;
         line-height: 18px;
     }
     
-    section.best-sellers .product-slider .product .product-info .price {
+    section.best-sellers .movie-collection .one-movie-box .movie-info .rating {
         font-size: 20px;
         font-weight: 700;
         letter-spacing: 0.5px;
     }
 
-    section.best-sellers .product-slider .product .product-info .price .original-price {
+    section.best-sellers .movie-collection .one-movie-box .movie-info .rating .original-rating {
         font-size: 11px;
         letter-spacing: 0.28px;
         line-height: 20px;
     }
 
-    section.best-sellers .product-slider .product .product-info button {
+    section.best-sellers .movie-collection .one-movie-box .movie-info button {
         height: 36px;
         width: 146px;
         font-size: 12px;
